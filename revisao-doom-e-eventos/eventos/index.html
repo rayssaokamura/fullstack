@@ -1,0 +1,195 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Exercícios de Eventos</title>
+
+    <style type="text/css" media="all">
+      div {
+        transition: all linear 1s;
+        max-height: 100px;
+        background-color: white;
+        overflow: hidden;
+      }
+
+      .escondido {
+        max-height: 0;
+      }
+
+      section {
+        padding: 10px;
+        border: 1px solid black;
+        margin-bottom: 10px;
+      }
+
+      section p span {
+        font-weight: bold;
+      }
+
+      section hr {
+        margin: 10px auto;
+        width: 98%;
+      }
+
+      section .cursor {
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Exercícios de Eventos</h1>
+      <p>
+        Podem alterar a estrutura do HTML para ficar mais fácil de selecionar os elementos.
+      </p>
+    </header>
+
+    <section>
+      <h2>Evento click</h2>
+
+      <p>
+        <span>Exercício 1:</span>
+        Alterar a cor do div apresentado a seguir, quando o próximo botão "click1" for pressionado.
+      </p>
+
+      <button id="btn1">click1</button>
+      <div id="div1">COR?</div>
+
+      <hr />
+
+      <p>
+        <span>Exercício 2:</span>
+        Apresentar/esconder o div apresentado a seguir, conforme o usuário pressionar o botão "click2".
+      </p>
+
+      <button id="btn2">click2</button>
+
+      <div
+        id="div2"
+        class="escondido"
+        style="background-color: yellow; height: 50px;"
+      >
+        Conteúdo secreto, escondido
+      </div>
+
+      <hr />
+
+      <p>
+        <span>Exercício 3:</span>
+        Mover o div apresentado a seguir para a direita/esquerda, toda vez que o botão "click3" for clicado (utilizar o style.transform).
+      </p>
+
+      <button id="btn3">click3</button>
+
+      <div
+        id="div3"
+        style="height: 50px; width: 50px; background-color: red; transform: translateX(0px);"
+      ></div>
+
+      <hr />
+
+      <p>
+        <span>Exercício 4:</span>
+        Alterar o conteúdo textual e apresentação do botão "click4", toda vez que ele for clicado.
+      </p>
+
+      <button id="btn4">click4</button>
+
+      <hr />
+
+      <p>
+        <span>Exercício 5:</span>
+        Acrescentar um elemento li com o texto "qualquer ítem" no elemento ul a seguir, toda vez que o botão "click5" for pressionado.
+      </p>
+
+      <button id="btn5">click5</button>
+      <ul id="ul5"></ul>
+
+      <hr />
+
+      <p>
+        <span>Exercício 6</span>:
+        Acrescentar um elemento li com o texto "item X" no elemento ul a seguir (sendo X, o índice do elemento no ul), toda vez que o botão "click6" for pressionado.
+      </p>
+
+      <button id="btn6">click6</button>
+      <ul id="ul6"></ul>
+    </section>
+
+    <section>
+      <h2>Eventos de teclado e o elemento input</h2>
+
+      <p>
+        <span>Exercício 7:</span>
+        Apresentar o conteúdo do input a seguir (utilizando um alert), toda vez que o botão "click7" for pressionado.
+      </p>
+
+      <fieldset>
+        <legend>Exercício 7</legend>
+
+        <input type="text" id="input7" value="" />
+        <button id="btn7">click7</button>
+      </fieldset>
+
+      <p>
+        <span>Exercício 8:</span>
+        Inserir o conteúdo do input a seguir em um elemento li e depois acrescenta-lo no elemento ul apresentado a seguir, toda vez que o botão "click8" for pressionado.
+      </p>
+
+      <fieldset>
+        <legend>Exercício 8</legend>
+
+        <input type="text" id="input8" value="" />
+        <button id="btn8">click8</button>
+        <ul id="ul8"></ul>
+      </fieldset>
+
+      <p>
+        <span>Exercício 9:</span>
+        Inserir o conteúdo do input a seguir dentro do elemento div a seguir, toda vez que o conteúdo do input for alterado (utilizar o evento change/keyup).
+      </p>
+
+      <fieldset>
+        <legend>Exercício 9</legend>
+
+        <div>
+          <input type="text" id="input9" value="" />
+
+          <div
+            id="div9"
+            style="height: 25px; width: 50%; background-color: cyan"
+          ></div>
+        </div>
+      </fieldset>
+
+      <p>
+        <span>Exercício 10:</span>
+        Capturar quando as teclas de seta para baixo/cima/esquerda/direita foram pressionadas, e alterar o posicionamento do div de classe cursor (utilizar o parâmetro evento e o atributo keyCode). É possível fazer sem o input? (Dica: evento focus, tabindex)
+      </p>
+
+      <fieldset>
+        <legend>Exercício 10</legend>
+
+        <input type="text" id="input10" value="" />
+
+        <div
+          style="position: relative; border: 1px solid black; margin: 10px; height: 100px;"
+        >
+          <div
+            id="cursor"
+            class="cursor"
+            style="top: 40px; left: 45%;"
+          ></div>
+        </div>
+      </fieldset>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
